@@ -17,3 +17,7 @@ plt.xlabel('x [radianes]')
 plt.legend()
 
 plt.show()
+
+def seno_menos_coseno(x):
+    output = np.sin(x) - np.cos(x)
+    return output
