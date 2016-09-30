@@ -7,7 +7,7 @@ Este script busca el punto de interseccion entre seno y coseno
 
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.optimize import bisect, newton
+from scipy.optimize import bisect, newton, brentq
 
 x_values = np.linspace(0, np.pi, 100)
 plt.figure(1)
@@ -53,8 +53,11 @@ plt.axvline(cero_mejor, color='k', label='esta implementacion')
 cero_newton = newton(seno_menos_coseno, 1.5)
 plt.axvline(cero_newton, color='g', ls='--', label='Newton')
 
+# Probando el metodo de Brent
+cero_brent = brentq(seno_menos_coseno, 0, 2.32)
+plt.axvline(cero_brent, color='m', ls='--', label='Brent')
 
 
 plt.legend()
-plt.show()
-#plt.savefig('raiz.png')
+# plt.show()
+plt.savefig('raiz.png')
