@@ -54,7 +54,7 @@ cero_newton = newton(seno_menos_coseno, 1.5)
 plt.axvline(cero_newton, color='g', ls='--', label='Newton')
 
 # Probando el metodo de Brent
-cero_brent = brentq(seno_menos_coseno, 0, 2.32)
+cero_brent = brentq(seno_menos_coseno, 0, 1.5)
 plt.axvline(cero_brent, color='m', ls='--', label='Brent')
 
 
